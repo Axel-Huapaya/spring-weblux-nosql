@@ -96,8 +96,8 @@ mvn spring-boot:run
   {
     "id": "67dc27fdff48535c360c404e",
     "dni": "12345678",
-    "firstName": "Juan",
-    "lastName": "Sanchez",
+    "firstName": "axel",
+    "lastName": "huapaya",
     "state": "A"
   }
 ]
