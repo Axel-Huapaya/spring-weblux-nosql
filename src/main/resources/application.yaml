@@ -6,7 +6,11 @@ spring:
     name: spring-webflux-nosql
   data:
     mongodb:
-      uri: mongodb+srv://axelhuapaya_db_user:lider2021@cluster0.oyk6ogs.mongodb.net/primera_basededatos?appName=Cluster0
+      # Opción 1: MongoDB Atlas (Cloud)
+      # uri: mongodb+srv://axelhuapaya_db_user:lider2021@cluster0.oyk6ogs.mongodb.net/database_cloud?appName=Cluster0
+
+      # Opción 2: MongoDB Local (Docker) 
+      uri: mongodb://admin:admin12345@localhost:27017/database_local?authSource=admin
 
 springdoc:
   api-docs:
@@ -14,4 +18,6 @@ springdoc:
     path: /api-docs
   swagger-ui:
     enabled: true
-    path: /swagger-ui.html
+    path: /swagger-ui.html # http://localhost:8081/swagger-ui.html
+  
+# docker run -d --name mongodb -p 27017:27017 -v mongodb_data:/data/db -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin12345 axelhuapaya/mongodb:8
